@@ -9,9 +9,13 @@ To write a program to predict the price of the house and number of occupants in 
 
 ## Algorithm
 1.Start and import the required libraries and dataset.
+
 2.Split the dataset into input features X and target y.
+
 3.Create an SGDRegressor model and fit it using the training data.
+
 4.Predict the target values using the trained model. 
+
 5.Evaluate the model using Mean Squared Error (MSE) and display the results.
 
 ## Program:
