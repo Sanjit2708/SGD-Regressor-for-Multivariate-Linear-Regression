@@ -8,22 +8,48 @@ To write a program to predict the price of the house and number of occupants in 
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+1.Start and import the required libraries and dataset.
+2.Split the dataset into input features X and target y.
+3.Create an SGDRegressor model and fit it using the training data.
+4.Predict the target values using the trained model. 
+5.Evaluate the model using Mean Squared Error (MSE) and display the results.
 
 ## Program:
 ```
 /*
 Program to implement the multivariate linear regression model for predicting the price of the house and number of occupants in the house with SGD regressor.
-Developed by: 
-RegisterNumber:  
+Developed by: Sanjit A
+RegisterNumber:  212224220087
+
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model
+import LinearRegression
+from sklearn.datasets
+import fetch_california_housing
+
+data = { 'Size': [1000, 1200, 1500, 1800, 2000, 2200, 2500, 2700], 'Bedrooms': [2, 2, 3, 4, 4, 5, 5, 6], 'Age': [10, 8, 5, 3, 2, 2, 1, 1], 'Price': [45, 55, 70, 90, 100, 120, 135, 150], 'Rent': [15000, 18000, 22000, 28000, 32000, 35000, 40000, 45000]}
+df = pd.DataFrame(data)
+X = df[['Size', 'Bedrooms', 'Age']]Y = df[['Price', 'Rent']]
+X_train, X_test, Y_train, Y_test = train_test_split( X, Y, test_size=0.2, random_state=42)
+model = LinearRegression()model.fit(X_train, Y_train)
+LinearRegression()
+predictions = model.predict(X_test)
+print("Predicted Values:")
+print(predictions)
+Predicted Values:[[ 53.96687697 17456.62460568] [ 116.5851735 35682.96529968]]
+print("\nActual Values:")print(Y_test.values)
+Actual Values:[[ 55 18000] [ 120 35000]]
+new_house = [[1600, 3, 4]]prediction = model.predict(new_house)
+print("\nPredicted House Price :", prediction[0][0], "Lakhs")
+print("Predicted House Rent :", prediction[0][1], "Rs/month")
+
 */
 ```
 
 ## Output:
-![multivariate linear regression model for predicting the price of the house and number of occupants in the house](sam.png)
+<img width="687" height="224" alt="image" src="https://github.com/user-attachments/assets/53da6195-46db-4c82-9798-993a9ec6a977" />
 
 
 ## Result:
